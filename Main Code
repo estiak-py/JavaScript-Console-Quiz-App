@@ -1,0 +1,29 @@
+const questions = [
+  {
+    question: "2 + 2 কত?",
+    answer: "4"
+  },
+  {
+    question: "JavaScript কে বানিয়েছে?",
+    answer: "Brendan Eich"
+  },
+  {
+    question: "HTML এর full form কি?",
+    answer: "HyperText Markup Language"
+  }
+];
+
+let score = 0;
+
+for (let i = 0; i < questions.length; i++) {
+  let userAnswer = prompt(questions[i].question);
+
+  if (userAnswer === questions[i].answer) {
+    console.log("✔ Correct!");
+    score++;
+  } else {
+    console.log("❌ Wrong! Correct answer: " + questions[i].answer);
+  }
+}
+
+console.log("🎯 Final Score: " + score + "/" + questions.length);
